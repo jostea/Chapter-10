@@ -1,4 +1,4 @@
-package HomeWork10_12;
+package HomeWork10_12_And_10_14;
 
 public class CommissionEmployee extends Employee {
 
@@ -6,8 +6,8 @@ public class CommissionEmployee extends Employee {
     private double commissionRate;
 
     public CommissionEmployee(String firstName, String secondName,
-                              String socialSecurityNumber, double grossSales, double commissionRate,int day, int month, int year) {
-        super(firstName, secondName, socialSecurityNumber,day,month,year);
+                              String socialSecurityNumber, double grossSales, double commissionRate, int day, int month, int year) {
+        super(firstName, secondName, socialSecurityNumber, day, month, year);
         setCommissionRate(commissionRate);
         setGrossSales(grossSales);
     }
@@ -15,15 +15,15 @@ public class CommissionEmployee extends Employee {
 
     @Override
     public double earnings() {
-        return getGrossSales() * getCommissionRate();
+        return getGrossSales() * getCommissionRate() + super.earnings();
     }
 
 
     @Override
     public String toString() {
-        return "Commission employee" + super.toString()
-                + "\nGross sales" + getGrossSales()
-                + "\nCommission Rate" + getCommissionRate();
+        return "Commission employee " + super.toString()
+                + "\nGross sales " + getGrossSales()
+                + "\nCommission Rate " + getCommissionRate();
     }
 
     public void setCommissionRate(double commissionRate) {

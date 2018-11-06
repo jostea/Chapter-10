@@ -1,20 +1,21 @@
-package HomeWork10_12;
+package HomeWork10_12_And_10_14;
 
-public abstract class Employee {
+import java.util.Calendar;
+
+public class Employee {
 
     private final String firstName;
     private final String secondName;
     private final String socialSecurityNumber;
 
-    private Date birthDate;
-
+    private BirthDay birthBirthDay;
 
 
     public Employee(String firstName, String secondName, String socialSecurityNumber, int day, int month, int year) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.socialSecurityNumber = socialSecurityNumber;
-        this.birthDate = new Date(day, month, year);
+        this.birthBirthDay = new BirthDay(day, month, year);
     }
 
     public String getFirstName() {
@@ -29,15 +30,22 @@ public abstract class Employee {
         return socialSecurityNumber;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
+    public BirthDay getBirthBirthDay() {
+        return birthBirthDay;
     }
+
     @Override
     public String toString() {
         return " " + getFirstName() + " " + getSecondName() + "\n" + getSocialSecurityNumber();
     }
 
 
-    public abstract double earnings();
+    public double earnings() {
+        int monthAsInt = Calendar.getInstance().get(Calendar.MONTH)+1;
+        if (birthBirthDay.getMonth() == monthAsInt) {
+            return 100;
+        } else
+        return 0;
+    }
 }
 

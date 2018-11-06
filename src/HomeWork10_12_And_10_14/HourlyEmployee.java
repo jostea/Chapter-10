@@ -1,4 +1,4 @@
-package HomeWork10_12;
+package HomeWork10_12_And_10_14;
 
 public class HourlyEmployee extends Employee {
 
@@ -35,16 +35,16 @@ public class HourlyEmployee extends Employee {
     @Override
     public double earnings() {
         if (getHours() <= 40) {
-            return getWage() * getHours();
+            return getWage() * getHours()+super.earnings();
         } else {
-            return 40 * getWage() + (getHours() - 40) * getWage() * 1.5;
+            return (40 * getWage() + (getHours() - 40) * getWage() * 1.5)+super.earnings();
         }
     }
 
 
     @Override
     public String toString() {
-        return "Hourly employee" + super.toString() + "\nHourly wage:" + getWage() +
-                "\nHours worked" + getHours();
+        return "Hourly employee " + super.toString() + "\nHourly wage:" + getWage() +
+                "\nHours worked " + getHours();
     }
 }

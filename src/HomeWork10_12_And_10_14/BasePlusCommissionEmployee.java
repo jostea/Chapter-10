@@ -1,4 +1,4 @@
-package HomeWork10_12;
+package HomeWork10_12_And_10_14;
 
 public class BasePlusCommissionEmployee extends CommissionEmployee {
 
@@ -25,7 +25,6 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
 
     @Override
     public double earnings() {
-
         return getBaseSalary() + super.earnings();
     }
 
@@ -33,6 +32,6 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
     @Override
     public String toString() {
         return "base-salaried " + super.toString() +
-                "\n base salary " + getBaseSalary();
+                "\nBase salary " + getBaseSalary();
     }
 }

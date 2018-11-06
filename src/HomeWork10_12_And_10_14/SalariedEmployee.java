@@ -1,4 +1,4 @@
-package HomeWork10_12;
+package HomeWork10_12_And_10_14;
 
 public class SalariedEmployee extends Employee {
     private double weeklySalary;
@@ -12,7 +12,7 @@ public class SalariedEmployee extends Employee {
 
     @Override
     public double earnings() {
-        return weeklySalary;
+        return weeklySalary+super.earnings();
     }
 
     public void setWeeklySalary(double weeklySalary) {

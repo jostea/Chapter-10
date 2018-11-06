@@ -1,16 +1,16 @@
-package HomeWork10_12;
+package HomeWork10_12_And_10_14;
 
-public class Date {
+public class BirthDay {
     private int day;
     private int month;
     private int year;
     private static final int[] daysPerMonth = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    public Date(int day, int month, int year) {
+    public BirthDay(int day, int month, int year) {
         setMonth(month);
         setDay(day);
         setYear(year);
-        System.out.println("HomeWork10_12.Date object constructor for date " + this);
+
     }
 
     public void setMonth(int month) {
