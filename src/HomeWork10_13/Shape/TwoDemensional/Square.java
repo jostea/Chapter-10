@@ -1,31 +1,20 @@
 package HomeWork10_13.Shape.TwoDemensional;
 
-public class Square extends TwoDemensionalShape {
+public class Square extends TwoDimensionallyShape {
 
     private double length;
 
     public Square(double length) {
-        setLength(length);
-        setArea(Math.pow(getLength(), 2));
-
-    }
-
-    public void setLength(double length) {
         this.length = length;
+
     }
 
-    public double getLength() {
-        return length;
+    public String toString() {
+        return "Square";
     }
 
     @Override
-    public void setArea(double area) {
-        super.setArea(area);
-    }
-
-
-
-    public String toString() {
-        return "Length of square:" + getLength();
+    public double getArea() {
+        return Math.pow((this.length), 2);
     }
 }

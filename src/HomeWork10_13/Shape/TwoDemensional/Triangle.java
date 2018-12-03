@@ -1,62 +1,25 @@
 package HomeWork10_13.Shape.TwoDemensional;
 
-public class Triangle extends TwoDemensionalShape {
+public class Triangle extends TwoDimensionallyShape {
 
-    private double p;
     private double firstSide;
     private double secondSide;
     private double thirdSide;
 
     public Triangle(double firstSide, double secondSide, double thirdSide) {
-        setFirstSide(firstSide);
-        setSecondSide(secondSide);
-        setThirdSide(thirdSide);
-        setP();
-        setArea(Math.sqrt(getP() * (getP() - getFirstSide()) * (getP() - getSecondSide()) * (getP() - getThirdSide())));
-
-    }
-
-    public void setP() {
-        this.p = (getFirstSide() + getSecondSide() + getThirdSide()) / 2;
-    }
-
-    public void setFirstSide(double firstSide) {
         this.firstSide = firstSide;
-    }
-
-    public void setSecondSide(double secondSide) {
         this.secondSide = secondSide;
-    }
-
-    public void setThirdSide(double thirdSide) {
         this.thirdSide = thirdSide;
     }
 
     @Override
-    public void setArea(double area) {
-        super.setArea(area);
+    public double getArea() {
+        double p = (this.firstSide + this.secondSide + this.thirdSide) / 2;
+        return Math.sqrt(p * (p - firstSide) * (p) - secondSide * (p - thirdSide));
     }
 
-    public double getP() {
-        return p;
-    }
-
-    public double getFirstSide() {
-        return firstSide;
-    }
-
-    public double getSecondSide() {
-        return secondSide;
-    }
-
-    public double getThirdSide() {
-        return thirdSide;
-    }
-
-
+    @Override
     public String toString() {
-        return "\nSide 1 of triangle " + getFirstSide() +
-                "\nSide 2 of triangle " + getSecondSide() +
-                "\nSide 3 of triangle " + getThirdSide();
+        return "Triangle";
     }
 }
